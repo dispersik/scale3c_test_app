@@ -11,8 +11,10 @@ class ProfilePage extends Page<void> {
   Route<void> createRoute(BuildContext context) {
     return MaterialPageRoute<void>(builder: (BuildContext context) {
       return BlocProvider<ProfileBloc>(
-        create: (_) => ProfileBloc(),
         child: ProfileScreen(),
+        create: (BuildContext context) => ProfileBloc(
+          navigator: Navigator.of(context),
+        ),
       );
     });
   }

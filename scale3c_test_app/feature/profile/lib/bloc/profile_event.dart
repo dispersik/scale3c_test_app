@@ -1,5 +1,7 @@
 abstract class ProfileEvent {}
 
-class Pop extends ProfileEvent {}
+class InitEvent extends ProfileEvent {}
 
-class LogOut extends ProfileEvent {}
+class PopEvent extends ProfileEvent {}
+
+class LogOutEvent extends ProfileEvent {}

@@ -10,4 +10,4 @@ class SignInWithEmailAndPasswordEvent extends SignInEvent {
   });
 }
 
-class RouteToSignUp extends SignInEvent {}
+class RouteToSignUpEvent extends SignInEvent {}

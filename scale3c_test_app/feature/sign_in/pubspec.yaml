@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.2
+  core:
+    path: ../../core
   domain:
     path: ../../domain
   core_ui:

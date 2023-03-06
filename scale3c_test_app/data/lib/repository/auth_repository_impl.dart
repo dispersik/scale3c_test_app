@@ -25,11 +25,13 @@ class AuthRepositoryImpl implements AuthRepository {
     required String password,
   }) async {
     try {
-      await _fbAuthInstance.signInWithEmailAndPassword(
+      await _fbAuthInstance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
-    } catch (_) {
+    } catch (e) {
+      print(e);
+
       throw Exception('Email in use');
     }
   }

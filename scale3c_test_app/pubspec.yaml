@@ -11,8 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  core_ui:
-    path: core_ui
+  core:
+    path: core
+  data:
+    path: data
+  domain:
+    path: domain
   sign_in:
     path: feature/sign_in
   firebase_core: ^2.7.0

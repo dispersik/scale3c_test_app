@@ -12,5 +12,5 @@ class SignUpWithEmailAndPasswordEvent extends SignUpEvent {
 
 class RouteToSignIn extends SignUpEvent {}
 
-class Pop extends SignUpEvent {}
+class PopEvent extends SignUpEvent {}
 

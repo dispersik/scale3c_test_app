@@ -19,7 +19,7 @@ class AuthInteractor {
     required String email,
     required String password,
   }) async {
-    return _authRepository.signInWithEmailAndPassword(
+    return _authRepository.signUpWithEmailAndPassword(
         email: email, password: password);
   }
 

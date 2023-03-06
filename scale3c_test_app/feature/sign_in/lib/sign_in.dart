@@ -8,11 +8,18 @@ import 'sign_in_screen.dart';
 class SignInPage extends Page<void> {
   @override
   Route<void> createRoute(BuildContext context) {
-    return MaterialPageRoute<void>(builder: (BuildContext context) {
-      return BlocProvider<SignInBloc>(
-        create: (_) => SignInBloc(initialState),
-        child: SignInScreen(),
-      );
-    });
+    return MaterialPageRoute<void>(builder: (_) => SignInScreen());
+  }
+}
+
+class SignInScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider<SignInBloc>(
+      create: (BuildContext context) => SignInBloc(
+        navigator: Navigator.of(context),
+      ),
+      child: SignInScreenInternal(),
+    );
   }
 }

@@ -2,35 +2,22 @@ import 'package:core_ui/core_ui.dart';
 import 'package:flutter/material.dart';
 
 class AppTextField extends StatelessWidget {
-  final bool _isObscure;
+  final bool isObscure;
   final String hintText;
+  final TextEditingController controller;
 
-  factory AppTextField.notObscure({
-    required String hintText,
-  }) =>
-      AppTextField._(
-        isObscure: false,
-        hintText: hintText,
-      );
-
-  factory AppTextField.obscure({
-    required String hintText,
-  }) =>
-      AppTextField._(
-        isObscure: true,
-        hintText: hintText,
-      );
-
-  const AppTextField._({
+  const AppTextField({
     required this.hintText,
-    required bool isObscure,
-  }) : _isObscure = isObscure;
+    required this.controller,
+    required this.isObscure,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       cursorColor: AppColorTheme.accent,
-      obscureText: _isObscure,
+      obscureText: isObscure,
       decoration: InputDecoration(
         border: InputBorder.none,
         hintText: hintText,
